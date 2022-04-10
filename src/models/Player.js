@@ -12,6 +12,7 @@ const player = (sequelize, DataTypes) => {
             },
             // For UUIDs, use DataTypes.UUID. It becomes the UUID data type for PostgreSQL and SQLite, and CHAR(36) for MySQL.
             // Sequelize can generate UUIDs automatically for these fields, simply use DataTypes.UUIDV1 or DataTypes.UUIDV4 as the default value
+            // Not neccessary right now, but could be useful if we decide to later add authentication
             uid: {
                 type: DataTypes.UUID,
                 defaultValue: DataTypes.UUIDV4,

@@ -15,16 +15,10 @@ const game = (sequelize, DataTypes) => {
             },
             player_x_id: {
                 type: DataTypes.INTEGER, 
-            }, 
-            player_x: {
-
-            }, 
+            },
             player_o_id: {
                 type: DataTypes.INTEGER, 
             },
-            player_o: {
-
-            }
         },
         // By default, Sequelize automatically adds the fields createdAt and updatedAt to every model, using the data type DataTypes.DATE.
         // Those fields are automatically managed as well - whenever you use Sequelize to create or update something, those fields will be set correctly.  
@@ -35,11 +29,9 @@ const game = (sequelize, DataTypes) => {
         }
     );
     
-    // One to many association
-    Game.hasMany(Player, {
-        foreignKey: 'playerId'
-    });
-    Player.belongsTo(Game);
+    // One to many relationship
+    Player.hasMany(Game)
+    Game.belongsToMany(Player)
 
     // This creates the table if it doesn't exist (and does nothing if it already exists)
     Game.sync()
