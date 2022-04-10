@@ -1,7 +1,31 @@
 {
   "dependencies": {
     "express": "^4.17.3",
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "postgres": "^3.0.5",
     "sequelize": "^6.18.0",
     "socket.io": "^4.4.1"
-  }
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.4.1"
+  },
+  "name": "tic-tac-toe-express-api",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roshni-patel/tic-tac-toe-express-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roshni-patel/tic-tac-toe-express-api/issues"
+  },
+  "homepage": "https://github.com/roshni-patel/tic-tac-toe-express-api#readme"
 }
